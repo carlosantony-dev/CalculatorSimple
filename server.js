@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static(`${__dirname}/src/${nomeApp}`));
 
 app.get('/*', (req, res) => {
-res.sendFile(path.join(`${__dirname}/src/${nomeApp}/app.component.html`));
+res.sendFile(__dirname + "src/app/app.component.html");
 });
 
 app.listen(process.env.PORT || 8080);
